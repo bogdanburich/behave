@@ -1,7 +1,7 @@
 from behave import *
 from views.views import add_post, login, profile
 
-@Given(u'logged user and "{posts_num:d}" post written by user')
+@Given('logged user and "{posts_num:d}" post written by user')
 def step_impl(context, posts_num):
     context.login_data = {
         "user": "username",
@@ -20,7 +20,7 @@ def step_impl(context, posts_num):
         add_post(context.post_data)
         
 
-@When(u'go to profile page')
+@When('go to profile page')
 def step_impl(context):
     context.profile = profile()
 
