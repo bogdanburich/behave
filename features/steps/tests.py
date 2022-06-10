@@ -14,11 +14,10 @@ def step_impl(context, posts_num):
         "owner": context.login_data.get('user')
     }
 
-    login(**context.login_data)
-    
-    for _ in range(posts_num):
-        add_post(context.post_data)
-        
+    if login(**context.login_data):
+        for _ in range(posts_num):
+            add_post(context.post_data)
+
 
 @When('go to profile page')
 def step_impl(context):
