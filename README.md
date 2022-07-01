@@ -8,5 +8,7 @@ views\views.py contains an example of functions implemenation that tests are bas
 
 ## How to run
 Create python virtual enviroment
+
 Run pip install requirements.txt command in termial
+
 Run behave command in terminal
